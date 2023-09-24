@@ -1,0 +1,5 @@
+-- https://platform.stratascratch.com/coding/10353-workers-with-the-highest-salaries?code_type=1
+SELECT t.worker_title FROM worker AS w
+LEFT JOIN title AS t 
+ON w.worker_id = t.worker_ref_id
+WHERE salary = (SELECT MAX(salary) FROM worker)
