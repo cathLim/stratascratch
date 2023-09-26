@@ -1,0 +1,14 @@
+--https://platform.stratascratch.com/coding/2006-users-activity-per-month-day?code_type=1
+SELECT
+  DATEPART(day, post_date) AS day_of_month,
+  COUNT(*) AS activity_count
+FROM
+  facebook_posts
+GROUP BY
+  DATEPART(day, post_date)
+ORDER BY
+  day_of_month;
+
+--start a query that gives two outputs: filtered daily increments from the post_date column
+-- and counting the total number;
+--grouping the results by the date_part output you specified in your query.
