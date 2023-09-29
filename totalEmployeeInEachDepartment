@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/9861-find-the-number-of-employees-in-each-department?code_type=3
+SELECT department, COUNT(department) AS department_name
+FROM worker
+GROUP BY department
