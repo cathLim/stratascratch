@@ -1,0 +1,14 @@
+-- https://platform.stratascratch.com/coding/2057-weight-for-first-shipment?code_type=3
+SELECT shipment_id, weight , MIN(shipment_date) AS ship_date
+FROM amazon_shipment
+GROUP BY shipment_id
+
+/*
+SELECT shipment_id, weight, shipment_date AS earliest_shipment_date
+FROM amazon_shipment AS s
+WHERE shipment_date = (
+    SELECT MIN(shipment_date)
+    FROM amazon_shipment AS min
+    WHERE s.shipment_id = min.shipment_id
+);
+*/
