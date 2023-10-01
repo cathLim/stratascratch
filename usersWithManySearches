@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/2061-users-with-many-searches?code_type=3
+SELECT COUNT(*) AS user_count
+FROM fb_searches
+WHERE YEAR(date) = 2021 AND MONTH(date) = 8;
