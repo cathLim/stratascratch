@@ -1,0 +1,7 @@
+-- https://platform.stratascratch.com/coding/2062-questions-in-second-quarter?code_type=3
+SELECT searches FROM (
+    SELECT EXTRACT(QUARTER FROM date), COUNT(*) AS searches
+    FROM fb_searches
+    WHERE EXTRACT(QUARTER FROM date) = 2 AND EXTRACT(YEAR FROM date) = '2021'
+    GROUP BY 1
+) count_by_quarter
