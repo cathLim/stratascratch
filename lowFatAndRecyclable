@@ -1,0 +1,13 @@
+-- https://platform.stratascratch.com/coding/2067-low-fat-and-recyclable?code_type=3
+WITH Percent AS (
+  SELECT
+    COUNT(DISTINCT CASE WHEN is_low_fat = 'Y' AND is_recyclable = 'Y' THEN product_id END) AS low_fat_recyclable_count,
+    COUNT(DISTINCT product_id) AS total_product_count
+  FROM
+    facebook_products
+)
+
+SELECT
+  ROUND(low_fat_recyclable_count * 100.0 / total_product_count, 2) AS percentage
+FROM
+  Percent;
