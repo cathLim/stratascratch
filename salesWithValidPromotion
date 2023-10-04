@@ -1,0 +1,6 @@
+-- https://platform.stratascratch.com/coding/2069-sales-with-valid-promotion?code_type=3
+
+SELECT (COUNT(DISTINCT o.promotion_id) * 100.0 / COUNT(DISTINCT p.promotion_id)) AS percentage_of_orders_with_promotion
+FROM online_orders o
+LEFT JOIN online_promotions p
+ON o.promotion_id = p.promotion_id;
