@@ -1,0 +1,5 @@
+-- https://platform.stratascratch.com/coding/9847-find-the-number-of-workers-by-department?code_type=3
+SELECT department, COUNT(*) as num_workers
+FROM worker
+WHERE MONTH(joining_date) >= 4
+GROUP BY department
