@@ -1,0 +1,5 @@
+-- https://platform.stratascratch.com/coding/10166-reviews-of-hotel-arena/official-solution?code_type=3
+SELECT hotel_name, reviewer_score, count(*)
+FROM hotel_reviews
+WHERE hotel_name = 'Hotel Arena'
+GROUP BY hotel_name, reviewer_score
