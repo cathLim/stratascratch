@@ -1,0 +1,5 @@
+-- https://platform.stratascratch.com/coding/9892-second-highest-salary
+SELECT DISTINCT salary
+FROM employee
+ORDER BY salary DESC
+LIMIT 1 OFFSET 1
