@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/2129-post-likes?code_type=3
+SELECT COALESCE(AVG(no_of_likes),0) AS average_num_of_likes
+FROM fb_posts
+ -- COALESCE function to return zero if it has no results
