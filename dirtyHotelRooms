@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/9602-dirty-hotel-rooms?code_type=3
+SELECT * FROM hotel_reviews
+WHERE hotel_address LIKE "%Netherlands%"
+AND negative_review LIKE "%dirty%";
