@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/9625-cheapest-properties?code_type=3
+SELECT city, MIN(price) AS lowest_price
+FROM airbnb_search_details
+GROUP BY city;
