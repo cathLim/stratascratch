@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/9667-count-users-that-speak-english-german-french-or-spanish?code_type=3
+SELECT COUNT(DISTINCT user_id) as num_of_users , language 
+FROM playbook_users
+GROUP BY language
