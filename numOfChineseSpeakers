@@ -1,0 +1,14 @@
+-- https://platform.stratascratch.com/coding/9685-companies-with-chinese-speakers?code_type=3
+WITH chinese_speakers AS (
+  SELECT company_id, user_id
+  FROM playbook_users
+  WHERE language = 'chinese'
+  GROUP BY company_id, user_id
+  HAVING COUNT(1) >= 2
+)
+
+SELECT DISTINCT p.company_id
+FROM playbook_users p
+JOIN chinese_speakers c ON p.company_id = c.company_id
+GROUP BY p.company_id
+HAVING COUNT(DISTINCT p.user_id) >= 2;
