@@ -1,0 +1,4 @@
+-- https://platform.stratascratch.com/coding/9866-highest-salary-and-full-name?code_type=1
+SELECT CONCAT(first_name, ' ', last_name) AS fullName, salary
+FROM worker
+WHERE salary = (SELECT MAX(salary) FROM worker);
